@@ -2,8 +2,7 @@
 
  {
 
-  programs.starship.enable = true;
-  programs.zoxide.enable = true;
+  programs.kitty.enable = true;
 
 
   programs.zsh = {
@@ -15,7 +14,7 @@
 
   home.file = {
     # ".zshrc".source = ./dotfiles/.zshrc;
-    ".config/starship.toml".source = ../dotfiles/starship.toml;
+    ".config/starship.toml".source = ./dotfiles/starship.toml;
   };
 
 }

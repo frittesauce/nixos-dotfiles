@@ -170,7 +170,6 @@
      os-prober  
      git
      fastfetch
-     kitty
      rofi
      swww
   ];
