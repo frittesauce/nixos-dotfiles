@@ -31,8 +31,6 @@ setopt inc_append_history
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 autoload -U compinit; compinit
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"

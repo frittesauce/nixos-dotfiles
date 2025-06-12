@@ -135,6 +135,7 @@
     isNormalUser = true;
     description = "boogieman";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
      helix
      vesktop
@@ -153,6 +154,7 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+  programs.zsh.enable = true;
   programs.thunar.enable = true;
 
   # Allow unfree packages
