@@ -2,8 +2,7 @@
 
 {
 
-
   home.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "ComicShannsMono" ]; })
+    nerd-fonts.comic-shanns-mono
   ];
 }
