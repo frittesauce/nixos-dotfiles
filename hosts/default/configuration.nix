@@ -141,7 +141,6 @@
      waypaper
      neovim
      vscode
-     starship
     ];
   };
 
