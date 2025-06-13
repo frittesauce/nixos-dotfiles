@@ -47,11 +47,6 @@
 
   services.blueman.enable = true;
   
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true; # Xwayland can be disabled.
-  };
-
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot";
 
