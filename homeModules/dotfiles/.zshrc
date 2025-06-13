@@ -8,6 +8,7 @@ export PATH=$PATH:/home/paashaas/.spicetify
 
 alias vim="nvim"
 alias ff="fastfetch"
+alias rebuild="sudo nixos-rebuild switch --flake ${HOME}/nixos/#default"
 
 HISTFILE=~/.history
 HISTSIZE=10000
