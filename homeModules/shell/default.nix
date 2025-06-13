@@ -2,6 +2,10 @@
 
  {
 
+  imports = [
+    ./tmux.nix
+  ];
+
   programs.starship.enable = true;
   programs.zoxide.enable = true;
 

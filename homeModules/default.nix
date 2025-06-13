@@ -3,6 +3,6 @@
 {
   imports = [
     ./shell
-    ./terminals/kitty
+    ./desktopEnviorments/hyprland
   ];
 }
