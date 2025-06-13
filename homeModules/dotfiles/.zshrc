@@ -6,6 +6,8 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:${HOME}/.cargo/bin
 export PATH=$PATH:/home/paashaas/.spicetify
 
+export TMUX_CONF="$HOME/.config/tmux/tmux.conf"
+
 alias vim="nvim"
 alias ff="fastfetch"
 alias rebuild="sudo nixos-rebuild switch --flake ${HOME}/nixos/#default"

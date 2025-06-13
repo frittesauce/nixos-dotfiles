@@ -8,7 +8,22 @@
       catppuccin
     ];
 
-    extraConfig = builtins.readFile ../dotfiles/.tmux.conf;
+    extraConfig = ''
+      unbind r
+      bind r source-file ~/.tmux.conf
+
+      set -g prefix C-z
+
+      bind-key h select-pane -L
+      bind-key j select-pane -D
+      bind-key k select-pane -U
+      bind-key l select-pane -R
+
+      set -g @plugin 'tmux-plugins/tpm'
+      set -g @plugin 'catppuccin/tpm'
+
+      run '~/.tmux/plugins/tpm/tpm'
+      '';
 
   };
 
