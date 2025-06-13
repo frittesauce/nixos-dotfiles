@@ -6,9 +6,12 @@
 
 
   home.file = {
-    ".config/hypr" = {
-      source = ../../dotfiles/hypr;
-      recursive = true;
+    ".config/hypr/hyprland.conf" = {
+      source = ../../dotfiles/hypr/hyprland.conf;
+    };
+    ".config/hypr/scripts/startup.sh" = {
+      source = ../../dotfiles/hypr/scripts/startup.sh;
+      executable = true;
     };
   };
 }
