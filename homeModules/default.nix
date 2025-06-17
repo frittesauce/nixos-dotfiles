@@ -4,5 +4,6 @@
   imports = [
     ./shell
     ./desktopEnviorments/hyprland
+    ./syncthing
   ];
 }

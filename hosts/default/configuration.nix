@@ -77,8 +77,13 @@
   services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = false;
+  services.displayManager.sddm = {
+    enable = true;
+    theme = "sddm-astronaut";
+    };
+
+  services.desktopManager.gnome.enable = true;
 
   systemd = {
   user.services.polkit-gnome-authentication-agent-1 = {
@@ -134,6 +139,7 @@
      waypaper
      neovim
      vscode
+     megacmd
     ];
   };
 
@@ -164,6 +170,8 @@
      fastfetch
      rofi
      swww
+     megacmd
+     sddm-astronaut
   ];
 
   system.stateVersion = "25.05"; # Did you read the comment?
