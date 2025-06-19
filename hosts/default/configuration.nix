@@ -127,6 +127,7 @@
   };
 
   programs.hyprland.enable = true;
+  services.flatpak.enable = true;
 
   users.users.boogieman = {
     isNormalUser = true;
@@ -140,8 +141,11 @@
      neovim
      vscode
      megacmd
+     gcc
+     cargo
     ];
   };
+
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
@@ -172,6 +176,7 @@
      swww
      megacmd
      sddm-astronaut
+    banana-cursor
   ];
 
   system.stateVersion = "25.05"; # Did you read the comment?
