@@ -178,6 +178,8 @@
      sddm-astronaut
      brightnessctl
      bun
+     wl-clipboard
+     grim
     #  npm
      nodejs
     banana-cursor
