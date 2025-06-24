@@ -176,6 +176,10 @@
      swww
      megacmd
      sddm-astronaut
+     brightnessctl
+     bun
+    #  npm
+     nodejs
     banana-cursor
   ];
 
