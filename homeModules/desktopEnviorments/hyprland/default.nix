@@ -4,6 +4,8 @@
 
   imports = [../../terminals/kitty];
 
+  programs.hyprlock.enable = true;
+
 
   home.file = {
     ".config/hypr/hyprland.conf" = {
