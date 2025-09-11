@@ -5,6 +5,7 @@ export PGHOST="/var/run/postgresql"
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:${HOME}/.cargo/bin
 export PATH=$PATH:${HOME}/.local/bin
+export PATH=$PATH:${HOME}/.local/share/gem/ruby/3.3.0/bin 
 
 export TMUX_CONF="$HOME/.config/tmux/tmux.conf"
 

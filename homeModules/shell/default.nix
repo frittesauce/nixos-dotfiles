@@ -10,6 +10,7 @@
   programs.zoxide.enable = true;
 
 
+
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;

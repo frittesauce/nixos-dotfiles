@@ -143,6 +143,22 @@
      megacmd
      gcc
      cargo
+     pavucontrol
+     steam
+     discord
+     code-cursor
+     ngrok
+     slurp
+     ruby
+     sqlite
+        gnumake
+        pkg-config
+        zlib
+        openssl
+        gmp
+        readline
+        rustc
+        libyaml
     ];
   };
 
