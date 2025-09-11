@@ -5,6 +5,7 @@
   imports = [
     ./tmux.nix
     ./yazi.nix
+    ./fastfetch.nix
   ];
 
   programs.starship.enable = true;
