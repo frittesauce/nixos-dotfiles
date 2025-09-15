@@ -2,7 +2,9 @@
 
 {
 
-  imports = [../../terminals/kitty];
+  imports = [../../terminals/kitty
+              ./bar
+  ];
 
   programs.hyprlock.enable = true;
 

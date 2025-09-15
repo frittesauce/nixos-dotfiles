@@ -1,0 +1,6 @@
+{ config, pkgs, ... }:
+
+{
+  programs.quickshell.enable = true;
+
+}
