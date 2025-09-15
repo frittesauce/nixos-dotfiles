@@ -12,7 +12,7 @@ export TMUX_CONF="$HOME/.config/tmux/tmux.conf"
 alias vim="nvim"
 alias ff="fastfetch"
 alias rebuild="sudo nixos-rebuild switch --flake ${HOME}/nixos/#default"
-alias qs-nix = "quickshell -c ~/nixos/homeModules/dotfiles/quickhell"
+alias qs-nix="quickshell -c ~/nixos/homeModules/dotfiles/quickshell"
 
 HISTFILE=~/.history
 HISTSIZE=10000
