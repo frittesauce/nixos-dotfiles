@@ -78,9 +78,8 @@
 
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = false;
-  services.displayManager.sddm = {
+  services.displayManager.ly = {
     enable = true;
-    theme = "sddm-astronaut";
     };
 
   services.desktopManager.gnome.enable = true;
@@ -159,6 +158,7 @@
         readline
         rustc
         libyaml
+        rustup
     ];
   };
 
