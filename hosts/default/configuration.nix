@@ -159,7 +159,21 @@
         rustc
         libyaml
         rustup
+        spotify
+        playerctl
     ];
+  };
+
+  
+  services.mpd = {
+    enable = true;
+    musicDirectory = "/home/user/Music/synced";
+    extraConfig = ''
+      audio_output {
+         type "pipewire"
+         name "PipeWire MPD Output"
+       }      
+    '';
   };
 
 
