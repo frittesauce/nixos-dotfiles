@@ -7,6 +7,7 @@ Text {
     id: clock
     
     anchors.left: parent
+    color: "#CDD6F4"
 
     Process {
       id: dateProc

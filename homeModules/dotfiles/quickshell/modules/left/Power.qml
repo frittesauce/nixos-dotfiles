@@ -6,6 +6,7 @@ import qs.services
 Text {
     id: batteryIndicator
     text: Battery.percentage
+    color: "#CDD6F4"
 
 
     Connections {
