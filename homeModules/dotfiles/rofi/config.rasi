@@ -8,10 +8,10 @@ configuration {
 
 * {
   // general
-  bg: #282828;
+  bg: #282828ff;
   bgt: #28282895;
   t: transparent;
-  fg: #d4be98;
+  fg: #8772e7ff;
 
   selected-bg: @fg;
   selected-fg: @bg;
