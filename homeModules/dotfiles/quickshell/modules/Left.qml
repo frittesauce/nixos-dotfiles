@@ -1,11 +1,12 @@
 import Quickshell
 import Quickshell.Io
 import QtQuick
+import qs.services
 import "left"
 
 Rectangle {
   id: left
-  color: "#1E1E2E"
+  color: Colours.bgcolor
     anchors {
         verticalCenter: parent.verticalCenter
         left: parent.left

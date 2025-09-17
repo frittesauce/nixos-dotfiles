@@ -7,7 +7,7 @@ import qs.services
 
 Button {
     id: music
-    width: 175
+    width: 200
     height: 45
     readonly property MprisPlayer activePlayer: MprisController.activePlayer
 
@@ -24,7 +24,7 @@ Button {
         Text {
             id: trackLabel
             text: activePlayer.trackTitle + " - " + activePlayer.trackArtist
-            color: "#CDD6F4"
+            color: Colours.fgcolor
             font.pixelSize: 14
             anchors.verticalCenter: parent.verticalCenter
 
@@ -34,7 +34,7 @@ Button {
             // scroll animation
             SequentialAnimation on x {
                 id: scrollAnim
-                running: trackLabel.paintedWidth > scrollBox.width
+                running: trackLabel.paintedWidth > scrollBox.width 
                 loops: Animation.Infinite
 
                 NumberAnimation {
@@ -43,14 +43,14 @@ Button {
                     duration: 10000
                     easing.type: Easing.Linear
                 }
-                PauseAnimation { duration: 4500 }
+                PauseAnimation { duration: 450 }
                 NumberAnimation {
                     from: -(trackLabel.paintedWidth - scrollBox.width)
                     to: 0
                     duration: 10000
                     easing.type: Easing.Linear
                 }
-                PauseAnimation { duration: 4500 } 
+                PauseAnimation { duration: 450 } 
             }
         }
     }

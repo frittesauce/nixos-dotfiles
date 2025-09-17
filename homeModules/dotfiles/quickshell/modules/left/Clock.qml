@@ -1,13 +1,14 @@
 import Quickshell
 import Quickshell.Io
 import QtQuick
+import qs.services
 
 
 Text {
     id: clock
     
     anchors.left: parent
-    color: "#CDD6F4"
+    color: Colours.fgcolor
 
     Process {
       id: dateProc

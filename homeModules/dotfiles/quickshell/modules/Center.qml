@@ -1,12 +1,13 @@
 import Quickshell
 import Quickshell.Io
 import QtQuick
+import qs.services
 import "center"
 
 Rectangle {
     id: center
 
-    color: "#1E1E2E"
+    color: Colours.bgcolor
     anchors.centerIn: parent
     radius: 15
     height: parent.height
