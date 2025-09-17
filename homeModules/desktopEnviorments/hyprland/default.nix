@@ -17,5 +17,8 @@
       source = ../../dotfiles/hypr/scripts/startup.sh;
       executable = true;
     };
+    ".config/rofi/config.rasi" = {
+      source = ../../dotfiles/rofi/config.rasi;
+    };
   };
 }
