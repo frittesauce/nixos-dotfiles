@@ -5,8 +5,8 @@
   imports = [ ../../homeModules/default.nix];
   
   
-  home.username = "sigma";
-  home.homeDirectory = "/home/sigma";
+  home.username = "farmslop";
+  home.homeDirectory = "/home/farmslop";
 
 
   programs.git = {

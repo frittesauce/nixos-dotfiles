@@ -13,7 +13,7 @@
     ];
 
   # main-user.enable = "true";
-  # main-user.userName = "boogieman";
+  # main-user.userName = "farmslop";
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -25,16 +25,7 @@
 	enable = true;
 	efiSupport = true;
         devices = [ "nodev" ];
-        useOSProber = false;  # 👈 Important line 
-	
-
-    extraEntries = ''
-    menuentry "Arch Linux (old install)" {       
-      set root='hd0,gpt2'
-      linux /boot/vmlinuz-linux root=UUID=aff15c26-0ce5-42b5-9c00-4109ca82bc80 rw init=/usr/lib/systemd/systemd
-      initrd /boot/initramfs-linux.img
-    }      
-    '';	
+        useOSProber = false;  # 👈 Important line
   };
 
 
@@ -43,6 +34,11 @@
       enable = true;
       powerOnBoot = true;
     };
+    nvidia = {
+      modesetting.enable = true;
+      nvidiaSettings = true;
+      open = false;
+    };
   };
 
   services.blueman.enable = true;
@@ -50,10 +46,16 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.efi.efiSysMountPoint = "/boot";
 
-  networking.hostName = "nixos"; # Define your hostname.
+  boot.kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_uvm" ];
+
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+  networking.hostName = "nixos"; 
 
   # Enable networking
   networking.networkmanager.enable = true;
+
+
 
   # Set your time zone.
   time.timeZone = "Europe/Amsterdam";
@@ -130,9 +132,9 @@
 
   users.users.farmslop = {
     isNormalUser = true;
-    description = "sigma";
+    description = "farmslop";
     extraGroups = [ "networkmanager" "wheel" ];
-       shell = pkgs.zsh;
+    shell = pkgs.zsh;
     packages = with pkgs; [
      helix
      vesktop
@@ -161,9 +163,11 @@
         rustup
         spotify
         playerctl
+        obsidian
     ];
   };
- 
+
+  
   services.mpd = {
     enable = true;
     musicDirectory = "/home/user/Music/synced";
@@ -179,7 +183,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      "sigma" = import ./home.nix;
+      "farmslop" = import ./home.nix;
     };
   };
 
