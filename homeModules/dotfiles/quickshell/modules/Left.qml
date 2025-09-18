@@ -7,26 +7,26 @@ import "left"
 Rectangle {
   id: left
   color: Colours.bgcolor
+  anchors {
+    verticalCenter: parent.verticalCenter
+    left: parent.left
+    leftMargin: 10
+  }
+  radius: 15
+  height: parent.height
+  width: childrenRect.width + 30
+
+  Row {
+    spacing: 30
+
     anchors {
-        verticalCenter: parent.verticalCenter
-        left: parent.left
-        leftMargin: 10
-    }
-    radius: 15
-    height: parent.height
-    width: childrenRect.width + 20
-
-Row {
-    spacing: 10
-
-    anchors {
-        verticalCenter: parent.verticalCenter
-        horizontalCenter: parent.horizontalCenter
+      verticalCenter: parent.verticalCenter
+      horizontalCenter: parent.horizontalCenter
     }
 
-  Clock { width: 55}
+    Clock { width: 55}
 
-  Power { width: 15}
-  
-}
+    Power { width: 35}
+
+  }
 }

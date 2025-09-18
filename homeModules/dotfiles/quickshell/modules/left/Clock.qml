@@ -9,6 +9,8 @@ Text {
     
     anchors.left: parent
     color: Colours.fgcolor
+    font.pixelSize: 16
+    font.family: Config.defaultFont
 
     Process {
       id: dateProc

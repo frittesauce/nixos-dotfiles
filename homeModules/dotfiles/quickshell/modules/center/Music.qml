@@ -10,6 +10,9 @@ Button {
     width: 200
     height: 45
     readonly property MprisPlayer activePlayer: MprisController.activePlayer
+    font.pixelSize: 16
+    font.family: Config.defaultFont
+    
 
     background: Rectangle {
         color: "transparent"
@@ -20,6 +23,7 @@ Button {
     Item {
         id: scrollBox
         anchors.fill: parent
+        anchors.centerIn: parent
 
         Text {
             id: trackLabel
@@ -27,35 +31,34 @@ Button {
             color: Colours.fgcolor
             font.pixelSize: 14
             anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
 
             width: paintedWidth
             height: paintedHeight
 
-            // scroll animation
-            SequentialAnimation on x {
-                id: scrollAnim
-                running: trackLabel.paintedWidth > scrollBox.width 
-                loops: Animation.Infinite
+            // // scroll animation
+            // SequentialAnimation on x {
+            //     id: scrollAnim
+            //     running: trackLabel.paintedWidth > scrollBox.width 
+            //     loops: Animation.Infinite
 
-                NumberAnimation {
-                    from: 0
-                    to: -(trackLabel.paintedWidth - scrollBox.width)
-                    duration: 10000
-                    easing.type: Easing.Linear
-                }
-                PauseAnimation { duration: 450 }
-                NumberAnimation {
-                    from: -(trackLabel.paintedWidth - scrollBox.width)
-                    to: 0
-                    duration: 10000
-                    easing.type: Easing.Linear
-                }
-                PauseAnimation { duration: 450 } 
-            }
+            //     NumberAnimation {
+            //         from: 0
+            //         to: -(trackLabel.paintedWidth - scrollBox.width)
+            //         duration: 10000
+            //         easing.type: Easing.Linear
+            //     }
+            //     PauseAnimation { duration: 450 }
+            //     NumberAnimation {
+            //         from: -(trackLabel.paintedWidth - scrollBox.width)
+            //         to: 0
+            //         duration: 10000
+            //         easing.type: Easing.Linear
+            //     }
+            //     PauseAnimation { duration: 450 } 
+            // }
         }
     }
 
-    onClicked: {
-        activePlayer.togglePlaying()
-    }
+    
 }
