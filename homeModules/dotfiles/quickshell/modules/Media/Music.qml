@@ -41,7 +41,7 @@ Button {
 
     onClicked: {
         GlobalStates.mediaControlerOpen = !GlobalStates.mediaControlerOpen
-        console.log(MprisController.activePlayer)
+        // console.log(MprisController.activePlayer)
     }
     
 }

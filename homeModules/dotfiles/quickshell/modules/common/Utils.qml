@@ -21,4 +21,11 @@ Singleton {
             return m + ":" + (s < 10 ? "0" : "") + s;
         }
     }
+
+
+    function trimFileProtocol(str) {
+        let s = str;
+        if (typeof s !== "string") s = str.toString(); // Convert to string if it's an url or whatever
+        return s.startsWith("file://") ? s.slice(7) : s;
+    }
 }

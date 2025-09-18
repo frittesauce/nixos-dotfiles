@@ -1,22 +1,52 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
+import Quickshell.Io
 import Quickshell
 import qs.services
 import qs.modules.common
+import QtQuick.Effects
+import Quickshell.Services.Mpris
+import qs
 
 Scope {
-    id: root
+    id: playerController
+
+
+    property var artUrl: MprisController?.activePlayer?.trackArtUrl
+    property string artDownloadLocation: Dir.coverArt
+    property string artFileName: Qt.md5(artUrl) + ".jpg"
+    property string artFilePath: `${artDownloadLocation}/${artFileName}`
+    property bool downloaded: false
 
     Timer {
 
-    running: MprisController.activePlayer.playbackState == MprisController.activePlayer.isPlaying
+        running: MprisController.activePlayer.playbackState == MprisController.activePlayer.isPlaying
 
-    interval: 1000
-    repeat: true
+        interval: 1000
+        repeat: true
 
-    onTriggered: MprisController.activePlayer.positionChanged()
+        onTriggered: MprisController.activePlayer.positionChanged()
     }
+
+    Process { // Cover art downloader
+        id: coverArtDownloader
+        property string targetFile: playerController.artUrl
+        command: [ "bash", "-c", `[ -f ${artFilePath} ] || curl -sSL '${targetFile}' -o '${artFilePath}'` ]
+        onExited: (exitCode, exitStatus) => {
+            playerController.downloaded = true
+        }
+    }
+
+    onArtUrlChanged: {
+        if (playerController.artUrl.length == 0) {
+            return;
+        }
+
+        playerController.downloaded = false;
+        coverArtDownloader.running = true;
+    }
+
 
     Loader {
         id: mediaControlersLoader
@@ -72,16 +102,19 @@ Scope {
                             property int size: parent.height
                             anchors.fill: parent
 
-                            source: MprisController.activePlayer.trackArtUrl
+                            source: playerController.downloaded ? Qt.resolvedUrl(artFilePath) : ""
                             fillMode: Image.PreserveAspectCrop
-
                             cache: false
+                            asynchronous: true
+
 
                             width: size 
                             height: size
                             
                             sourceSize.width: size
                             sourceSize.height: size
+
+                            
                         }
                     }
                     ColumnLayout {
@@ -93,7 +126,7 @@ Scope {
                             font.family: Config.defaultFont 
                             font.pixelSize: 20
                             color: Colours.fgcolor
-                            elide: text.ElideRight
+                            elide: Text.ElideRight
                             text: MprisController.activePlayer.trackTitle
                         }
 
@@ -103,7 +136,7 @@ Scope {
                             font.pixelSize: 16
                             font.family: Config.defaultFont
                             color: Colours.fgcolor
-                            elide: text.ElideRight
+                            elide: Text.ElideRight
                             text: MprisController.activePlayer.trackArtist
                         }
 
@@ -125,7 +158,7 @@ Scope {
 
                                 color: Colours.fgcolor
                                 
-                                elide: text.ElideRight
+                                elide: Text.ElideRight
 
                                 text: `${Utils.friendlyTimes(MprisController.activePlayer.position)} / ${Utils.friendlyTimes(MprisController.activePlayer.length)}`
 
