@@ -2,7 +2,7 @@ import Quickshell
 import Quickshell.Io
 import QtQuick
 import qs.services
-import "center"
+import "Media"
 
 Rectangle {
     id: center

@@ -4,6 +4,7 @@ import QtQuick
 import QtQuick.Controls
 import Quickshell.Services.Mpris 
 import qs.services
+import qs
 
 Button {
     id: music
@@ -20,8 +21,7 @@ Button {
 
     clip: true // cut off overflow text
 
-    Item {
-        id: scrollBox
+    Item { 
         anchors.fill: parent
         anchors.centerIn: parent
 
@@ -36,29 +36,12 @@ Button {
             width: paintedWidth
             height: paintedHeight
 
-            // // scroll animation
-            // SequentialAnimation on x {
-            //     id: scrollAnim
-            //     running: trackLabel.paintedWidth > scrollBox.width 
-            //     loops: Animation.Infinite
-
-            //     NumberAnimation {
-            //         from: 0
-            //         to: -(trackLabel.paintedWidth - scrollBox.width)
-            //         duration: 10000
-            //         easing.type: Easing.Linear
-            //     }
-            //     PauseAnimation { duration: 450 }
-            //     NumberAnimation {
-            //         from: -(trackLabel.paintedWidth - scrollBox.width)
-            //         to: 0
-            //         duration: 10000
-            //         easing.type: Easing.Linear
-            //     }
-            //     PauseAnimation { duration: 450 } 
-            // }
         }
     }
 
+    onClicked: {
+        GlobalStates.mediaControlerOpen = !GlobalStates.mediaControlerOpen
+        console.log(MprisController.activePlayer)
+    }
     
 }

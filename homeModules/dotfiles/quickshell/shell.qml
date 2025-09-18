@@ -3,29 +3,34 @@ import Quickshell.Io
 import QtQuick
 import "modules"
 import "./services/"
+import "GlobalStates"
+import "modules/Media"
 
-PanelWindow {
-  id: root
-  anchors {
-    top: true
-    left: true
-    right: true
-  }
+ShellRoot {
 
-  color: "transparent"
-
-  implicitHeight: 40
-  Rectangle {
-    color: "transparent"
+  PanelWindow {
+    id: root
     anchors {
-      bottom: parent.bottom
-      horizontalCenter: parent.horizontalCenter
+      top: true
+      left: true
+      right: true
     }
-      implicitHeight: 35
-      width: parent.width 
-    Left {}
 
-    Center {}
-  
- }
+    color: "transparent"
+
+    implicitHeight: 40
+    Rectangle {
+      color: "transparent"
+      anchors {
+        bottom: parent.bottom
+        horizontalCenter: parent.horizontalCenter
+      }
+        implicitHeight: 35
+        width: parent.width 
+      Left {}
+
+      Center {}
+    }
+  }
+ LazyLoader { active: GlobalStates.mediaControlerOpen ; component: MusicPopup {}}
 }
