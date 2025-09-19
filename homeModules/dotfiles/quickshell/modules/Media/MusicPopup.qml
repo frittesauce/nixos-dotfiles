@@ -208,8 +208,61 @@ Scope {
                                         background: Rectangle {
                                             color: Colours.accentcolor 
                                             radius: height / 2
-                                        }   
+                                            anchors.centerIn: parent
+                                            height: 4
+                                            width: parent.width
+                                        } 
+
+                                        contentItem: Item {
+                                            anchors.fill: parent
+
+                                            Canvas {
+                                                id: wavyFill
+                                                anchors {
+                                                    left: parent.left
+                                                    right: parent.right
+                                                    verticalCenter: parent.verticalCenter
+                                                }
+                                                height: parent.height * 6
+                                                onPaint: {
+                                                    var ctx = getContext("2d");
+                                                    ctx.clearRect(0, 0, width, height);
+
+                                                    var progress = progressBar.visualPosition;
+                                                    var fillWidth = progress * width;
+                                                    var amplitude = parent.height * 0.5;
+                                                    var frequency = 6;
+                                                    var phase = Date.now() / 400.0;
+                                                    var centerY = height / 2;
+
+                                                    ctx.strokeStyle = Colours.accentblue;
+                                                    ctx.lineWidth = parent.height;
+                                                    ctx.lineCap = "round";
+                                                    ctx.beginPath();
+                                                    for (var x = ctx.lineWidth / 2; x <= fillWidth; x += 1) {
+                                                        var waveY = centerY + amplitude * Math.sin(frequency * 2 * Math.PI * x / width + phase);
+                                                        if (x === 0)
+                                                            ctx.moveTo(x, waveY);
+                                                        else
+                                                            ctx.lineTo(x, waveY);
+                                                    }
+                                                    ctx.stroke();
+                                                }
+                                                Connections {
+                                                    target: progressBar
+                                                    function onValueChanged() { wavyFill.requestPaint(); }
+                                                    function onHighlightColorChanged() { wavyFill.requestPaint(); }
+                                                }
+                                                Timer {
+                                                    interval: 1000 / 60
+                                                    running: true
+                                                    repeat: true
+                                                    onTriggered: wavyFill.requestPaint()
+                                                }
+                                            }
+                                        }  
                                     }
+
                                 }
 
                                 Button {

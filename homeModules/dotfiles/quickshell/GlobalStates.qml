@@ -8,5 +8,5 @@ pragma Singleton
 Singleton {
     id: root
 
-    property bool mediaControlerOpen: false
+    property bool mediaControlerOpen: true
 }
