@@ -7,6 +7,7 @@ import qs.services
 import qs.modules.common
 import QtQuick.Effects
 import Quickshell.Services.Mpris
+import Quickshell.Hyprland
 import qs
 
 Scope {
@@ -77,6 +78,17 @@ Scope {
                 left: 775
                 right: 775
                 bottom: 0
+            }
+
+            HyprlandFocusGrab {
+
+                windows: [musicControlRoot]
+                active: mediaControlersLoader.active
+                onCleared: () => {
+                    if (!active) {
+                        GlobalStates.mediaControlerOpen = false;
+                    }
+                }
             }
 
             Rectangle {
