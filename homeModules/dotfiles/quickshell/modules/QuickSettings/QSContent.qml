@@ -102,9 +102,17 @@ Rectangle {
                     font.family: Config.defaultFont 
                 }
                 
+                onClicked: {
+                    GlobalStates.qsettingsOpen = false;
+                }
             }
         }
 
         Item { Layout.fillHeight: true }
+
+        ColumnLayout {
+            Layout.fillWidth: true
+
+        }
     }
 }
