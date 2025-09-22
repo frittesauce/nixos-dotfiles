@@ -9,4 +9,7 @@ Singleton {
     id: root
 
     property bool mediaControlerOpen: false
+
+    property bool qsettingsOpen: true
+
 }

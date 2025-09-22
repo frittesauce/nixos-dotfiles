@@ -8,5 +8,6 @@ Singleton {
     id: root
 
     property string defaultFont: "ComicShannsMono NerdFont"
+        property int barHeight: 40
 
-}
+        }

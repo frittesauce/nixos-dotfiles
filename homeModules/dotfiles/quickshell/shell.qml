@@ -5,6 +5,7 @@ import "modules"
 import "./services/"
 import "GlobalStates"
 import "modules/Media"
+import "modules/QuickSettings"
 
 ShellRoot {
 
@@ -21,4 +22,5 @@ ShellRoot {
   }
 
   LazyLoader { active: GlobalStates.mediaControlerOpen ; component: MusicPopup {}}
+  LazyLoader { active: GlobalStates.qsettingsOpen ; component: QuickSettings {}}
 }

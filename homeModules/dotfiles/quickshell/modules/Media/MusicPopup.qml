@@ -74,7 +74,7 @@ Scope {
 
 
             margins {
-                top: 45
+                top: Config.barHeight + 5
                 left: 775
                 right: 775
                 bottom: 0
