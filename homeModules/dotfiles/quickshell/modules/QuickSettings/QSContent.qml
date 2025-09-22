@@ -112,7 +112,6 @@ Rectangle {
 
         ColumnLayout {
             Layout.fillWidth: true
-
         }
     }
 }
