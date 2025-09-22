@@ -8,29 +8,17 @@ import "modules/Media"
 
 ShellRoot {
 
-  PanelWindow {
-    id: root
-    anchors {
-      top: true
-      left: true
-      right: true
-    }
 
-    color: "transparent"
-
-    implicitHeight: 40
-    Rectangle {
-      color: "transparent"
-      anchors {
-        bottom: parent.bottom
-        horizontalCenter: parent.horizontalCenter
+  Variants {
+    model: Quickshell.screens
+    Scope {
+      id: root
+      required property var modelData
+      Bar {
+        screen: modelData
       }
-        implicitHeight: 35
-        width: parent.width 
-      Left {}
-
-      Center {}
     }
   }
- LazyLoader { active: GlobalStates.mediaControlerOpen ; component: MusicPopup {}}
+
+  LazyLoader { active: GlobalStates.mediaControlerOpen ; component: MusicPopup {}}
 }
