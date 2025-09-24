@@ -150,17 +150,17 @@
      slurp
      ruby
      sqlite
-        gnumake
-        pkg-config
-        zlib
-        openssl
-        gmp
-        readline
-        rustc
-        libyaml
-        rustup
-        spotify
-        playerctl
+      gnumake
+      pkg-config
+      zlib
+      openssl
+      gmp
+      readline
+      rustc
+      libyaml
+      rustup
+      spotify
+      playerctl
     ];
   };
 

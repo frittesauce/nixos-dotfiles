@@ -60,7 +60,7 @@ Scope {
             id: musicControlRoot
             visible: true
 
-            implicitWidth: 200
+            implicitWidth: 350
             implicitHeight: 150
             color: "transparent"
 
@@ -68,15 +68,11 @@ Scope {
 
             anchors {
                 top: true
-                left: true
-                right: true
             }
 
 
             margins {
                 top: Config.barHeight + 5
-                left: 775
-                right: 775
                 bottom: 0
             }
 

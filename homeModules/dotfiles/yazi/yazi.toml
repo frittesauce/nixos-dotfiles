@@ -2,7 +2,7 @@
 show_hidden = false
 
 [opener]
-swww = [{ run = 'swww img "$0"', block = false, for = "unix" }]
+swww = [{ run = 'swww img "$0" --resize stretch', block = false, for = "unix" }]
 
 [open]
 rules = [{ mime = "image/*", use = "swww" }]
