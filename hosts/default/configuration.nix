@@ -1,15 +1,14 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, inputs, ... }:
-
+let
+  systemDir = ../../modules/system;
+  Module = name: systemDir + "/${name}.nix";
+  Default = name: systemDir + "/${name}/default.nix";
+in
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
-      # ./main-user.nix
       ../../systemModules
     ];
 
@@ -180,12 +179,6 @@
   };
 
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "boogieman" = import ./home.nix;
-    };
-  };
 
   programs.firefox.enable = true;
   programs.zsh.enable = true;
