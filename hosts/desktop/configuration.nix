@@ -16,6 +16,7 @@ in
       (Module "hardware/audio")
       (Module "hardware/bluetooth")
       (Module "hardware/common")
+      (Module "hardware/network")
     ];
 
   system.stateVersion = "25.05";
@@ -31,12 +32,6 @@ in
     };
   };
 
-  services.blueman.enable = true;
-  
-
-  networking.hostName = "nixos"; 
-
-  networking.networkmanager.enable = true;
 
   services.desktopManager.gnome.enable = true;
 
