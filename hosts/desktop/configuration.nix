@@ -20,6 +20,8 @@ in
 
       (Module "services/flatpak")
       (Module "services/syncthing")
+
+      (Module "programs/spotify")
     ];
 
   system.stateVersion = "25.05";

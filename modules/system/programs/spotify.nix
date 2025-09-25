@@ -1,21 +1,21 @@
-{ ... }:
+{ config, pkgs, inputs, ... }:
+
+let
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+in
 {
   imports = [
-    spicetify-nix.nixosModules.spicetify
+    inputs.spicetify-nix.nixosModules.spicetify
   ];
-
 
   programs.spicetify = {
     enable = true;
-
-    # optional settings:
-    enabledExtensions = with spicetify-nix.packages.extensions; [
+    enabledExtensions = with spicePkgs.extensions; [
       adblockify
       hidePodcasts
       shuffle
     ];
-
-    theme = spicetify-nix.packages.themes.catppuccin;
+    theme = spicePkgs.themes.catppuccin;
     colorScheme = "mocha";
   };
 }
