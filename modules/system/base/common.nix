@@ -15,12 +15,9 @@
     sddm-astronaut
     brightnessctl
     bun
-    wl-clipboard
-    grim
     nodejs
     tree
     vesktop
-    waypaper
     neovim
     vscode
     megacmd
@@ -30,7 +27,6 @@
     discord
     code-cursor
     ngrok
-    slurp
     ruby
     sqlite
     gnumake
@@ -54,7 +50,6 @@
     firefox.enable = true; 
     zsh.enable = true;
     thunar.enable = true;
-    hyprland.enable = true;
   };
 
   services = {
@@ -63,8 +58,18 @@
 
   security = {
     rtkit.enable = true;
-  }
+  };
 
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
+    package = pkgs.nix;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+  };
 }

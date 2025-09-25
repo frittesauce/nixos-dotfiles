@@ -7,10 +7,11 @@ in
 {
   imports = [
       ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
       (Default "base")
       (Default "boot")
-      (Module "misc")
+      (Default "desktop")
+
+      (Module "drivers/nvidia")
     ];
 
   system.stateVersion = "25.05";

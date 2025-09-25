@@ -12,21 +12,19 @@
   };
 
   outputs = { self, nixpkgs, ... }@inputs: 
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in
     {
       nixosConfigurations = {
         default = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
+            inputs.home-manager.nixosModules.default
             ./hosts/default/configuration.nix
           ];
         };
         desktop = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
+            inputs.home-manager.nixosModules.default
             ./hosts/desktop/configuration.nix
           ];
         };

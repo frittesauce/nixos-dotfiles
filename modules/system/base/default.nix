@@ -1,6 +1,8 @@
 { ... }:
 {
-  ./common.nix
-  ./locale.nix
-  ./polkit.nix
+  imports = [
+    ./common.nix
+    ./locale.nix
+    ./polkit.nix
+  ];
 }
