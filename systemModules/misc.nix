@@ -19,9 +19,5 @@
     grim
     nodejs
     banana-cursor
-    kotlin
-    kotlin-language-server
-    kotlin-native
-    java
   ];
 }

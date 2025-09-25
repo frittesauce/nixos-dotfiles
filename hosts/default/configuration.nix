@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
       # ./main-user.nix
+      ../../systemModules/miscPack.nix
     ];
 
   # main-user.enable = "true";
