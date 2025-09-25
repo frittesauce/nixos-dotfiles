@@ -14,6 +14,7 @@ in
       (Module "drivers/nvidia")
       
       (Module "hardware/audio")
+      (Module "hardware/bluetooth")
     ];
 
   system.stateVersion = "25.05";
@@ -26,13 +27,6 @@ in
 
     users = {
       "farmslop" = import ./home.nix;
-    };
-  };
-
-  hardware = {
-    bluetooth = {
-      enable = true;
-      powerOnBoot = true;
     };
   };
 
