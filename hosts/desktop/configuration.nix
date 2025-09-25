@@ -12,6 +12,8 @@ in
       (Default "desktop")
 
       (Module "drivers/nvidia")
+      
+      (Module "hardware/audio")
     ];
 
   system.stateVersion = "25.05";
@@ -32,19 +34,10 @@ in
       enable = true;
       powerOnBoot = true;
     };
-    nvidia = {
-      modesetting.enable = true;
-      nvidiaSettings = true;
-      open = false;
-    };
   };
 
   services.blueman.enable = true;
   
-
-  boot.kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_uvm" ];
-
-  services.xserver.videoDrivers = [ "nvidia" ];
 
   networking.hostName = "nixos"; 
 
@@ -58,15 +51,6 @@ in
   services.xserver.xkb = {
     layout = "us";
     variant = "";
-  };
-
-  services.pulseaudio.enable = false;
-
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
   };
 
   services.flatpak.enable = true;
