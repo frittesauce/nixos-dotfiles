@@ -35,7 +35,6 @@
     rustc
     libyaml
     rustup
-    spotify
     obsidian
   ];
 
