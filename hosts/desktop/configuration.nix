@@ -130,6 +130,10 @@
   programs.hyprland.enable = true;
   services.flatpak.enable = true;
 
+  programs.steam = {
+    enable = true;
+  };
+
   users.users.farmslop = {
     isNormalUser = true;
     description = "farmslop";
@@ -145,7 +149,6 @@
      gcc
      cargo
      pavucontrol
-     steam
      discord
      code-cursor
      ngrok
