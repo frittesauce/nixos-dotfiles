@@ -15,6 +15,7 @@ in
       
       (Module "hardware/audio")
       (Module "hardware/bluetooth")
+      (Module "hardware/common")
     ];
 
   system.stateVersion = "25.05";
@@ -37,15 +38,7 @@ in
 
   networking.networkmanager.enable = true;
 
-  services.xserver.enable = true;
-
   services.desktopManager.gnome.enable = true;
-
-
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
 
   services.flatpak.enable = true;
 
