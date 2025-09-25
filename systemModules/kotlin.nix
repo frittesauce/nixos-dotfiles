@@ -5,6 +5,8 @@
     kotlin
     kotlin-language-server
     kotlin-native
-    java
+    zulu24
+    gradle
+    jetbrains.idea-ultimate
   ];
 }

@@ -3,5 +3,5 @@
   imports = [
     ./kotlin.nix
     ./misc.nix
-  ]
+  ];
 }
