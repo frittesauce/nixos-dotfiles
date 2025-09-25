@@ -46,6 +46,7 @@
     firefox.enable = true; 
     zsh.enable = true;
     thunar.enable = true;
+    steam.enable = true;
   };
 
   services = {

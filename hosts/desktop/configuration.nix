@@ -17,6 +17,9 @@ in
       (Module "hardware/bluetooth")
       (Module "hardware/common")
       (Module "hardware/network")
+
+      (Module "services/flatpak")
+      (Module "services/syncthing")
     ];
 
   system.stateVersion = "25.05";
@@ -34,12 +37,6 @@ in
 
 
   services.desktopManager.gnome.enable = true;
-
-  services.flatpak.enable = true;
-
-  programs.steam = {
-    enable = true;
-  };
 
   users.users.farmslop = {
     isNormalUser = true;
