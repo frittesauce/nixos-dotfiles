@@ -36,6 +36,7 @@
     libyaml
     rustup
     obsidian
+    lazygit
   ];
 
   nixpkgs.config.allowUnfree = true;
