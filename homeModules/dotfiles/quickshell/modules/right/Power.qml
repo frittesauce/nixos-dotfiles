@@ -7,8 +7,8 @@ Text {
     id: batteryIndicator
     text: `󰁹 ${Battery.percentage}`
     color: Colours.fgcolor
-    font.pixelSize: 16
-    font.family: Config.defaultFont
+    font.pixelSize: 20
+    font.family: Config.defaultFont 
 
 
     Connections {

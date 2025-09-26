@@ -11,8 +11,7 @@ Button {
     width: 200
     height: 45
     readonly property MprisPlayer activePlayer: MprisController.activePlayer
-    font.pixelSize: 16
-    font.family: Config.defaultFont
+    
     
 
     background: Rectangle {
@@ -29,9 +28,9 @@ Button {
             id: trackLabel
             text: activePlayer.trackTitle + " - " + activePlayer.trackArtist
             color: Colours.fgcolor
-            font.pixelSize: 14
+            font.pixelSize: 20
+            font.family: Config.defaultFont
             anchors.verticalCenter: parent.verticalCenter
-            anchors.horizontalCenter: parent.horizontalCenter
 
             width: paintedWidth
             height: paintedHeight

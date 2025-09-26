@@ -9,7 +9,7 @@ Text {
     
     anchors.left: parent
     color: Colours.fgcolor
-    font.pixelSize: 16
+    font.pixelSize: 20
     font.family: Config.defaultFont
 
     Process {
