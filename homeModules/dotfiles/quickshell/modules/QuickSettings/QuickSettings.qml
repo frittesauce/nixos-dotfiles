@@ -29,7 +29,6 @@ Scope {
             implicitHeight: 300
 
             color: "transparent"
-
             exclusionMode: ExclusionMode.Ignore
             
             anchors {

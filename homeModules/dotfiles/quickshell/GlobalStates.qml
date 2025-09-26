@@ -12,4 +12,6 @@ Singleton {
 
     property bool qsettingsOpen: false
 
+    property bool sessionOpen: false
+
 }

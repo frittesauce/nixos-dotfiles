@@ -19,7 +19,6 @@ in
       (Module "hardware/network")
 
       (Module "services/flatpak")
-      (Module "services/syncthing")
 
       (Module "programs/spotify")
     ];

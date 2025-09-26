@@ -51,7 +51,6 @@ Rectangle {
                     
                     source: Qt.resolvedUrl(`${Dir.home}/icon.png`)
                     asynchronous: true
-                    // cache: true
 
                 }
             }   
@@ -103,7 +102,7 @@ Rectangle {
                 }
                 
                 onClicked: {
-                    GlobalStates.qsettingsOpen = false;
+                    GlobalStates.sessionOpen = !GlobalStates.sessionOpen;
                 }
             }
         }
