@@ -37,6 +37,7 @@
     rustup
     obsidian
     lazygit
+    pokeget-rs
   ];
 
   nixpkgs.config.allowUnfree = true;
