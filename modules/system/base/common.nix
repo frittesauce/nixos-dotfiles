@@ -14,7 +14,6 @@
     bun
     nodejs
     tree
-    vesktop
     neovim
     vscode
     megacmd
