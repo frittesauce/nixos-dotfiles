@@ -10,7 +10,7 @@ Singleton {
 
     property bool mediaControlerOpen: false
 
-    property bool qsettingsOpen: false
+    property bool qsettingsOpen: true
 
     property bool sessionOpen: false
 

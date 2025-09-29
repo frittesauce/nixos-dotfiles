@@ -93,6 +93,7 @@ Scope {
 
                 width: parent.width
                 height: parent.height
+                
                 radius: 15
                 RowLayout {
                     anchors.fill: parent
@@ -171,6 +172,7 @@ Scope {
                                 text: `${Utils.friendlyTimes(MprisController.activePlayer.position)} / ${Utils.friendlyTimes(MprisController.activePlayer.length)}`
 
                             }
+                            
                             RowLayout {
                                 id: sliderRow
                                 implicitHeight: 10

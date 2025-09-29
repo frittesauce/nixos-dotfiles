@@ -36,6 +36,7 @@
     rustup
     obsidian
     lazygit
+    pipewire
     pokeget-rs
   ];
 

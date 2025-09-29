@@ -1,28 +1,43 @@
 import QtQuick
 import QtQuick.Layouts
+import QtQuick.Controls
 import Quickshell
 import Quickshell.Services.Pipewire
 import qs
+import qs.services
 
 Item {
-    // readonly property list<PwNode> appPwNodes: Pipewire.nodes.values.filter((node) => {
-    //     return node.isSink && node.isStream
-    // })
+    id: root
+    Layout.fillWidth: true
+
+    implicitHeight: contentItem.implicitHeight
 
 
-    ColumnLayout {
-        // Repeater {
-        //     model: ScriptModel {
-        //         values: Pipewire.nodes.values.filter((node) => {
-        //             return node.isSink && node.isStream
-        //         })
-        //     }
+    Item {
+        id: contentItem
+        anchors.fill: parent
+        anchors.margins: 16 // Margin around sliders
 
-        //     delegate: Text {
-        //         required property var modelData
+        ColumnLayout {
+            id: layout
+            anchors.fill: parent
+            spacing: 20
+            
+            Slider {
+                Layout.fillWidth: true
+                from: 0
+                to: 1
+                value: Audio.volume
 
-        //         text: modelData.name
-        //     }
-        // }
+                onMoved: {
+                    Audio.setVolume(value)
+                }
+
+            }
+
+        }
+
+        implicitHeight: layout.implicitHeight + 20
     }
+    
 }

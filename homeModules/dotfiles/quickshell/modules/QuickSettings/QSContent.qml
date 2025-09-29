@@ -20,11 +20,12 @@ Rectangle {
 
     ColumnLayout {
         anchors.fill: parent
-        anchors.margins: 15
+        anchors.margins: 20
         spacing: 15
 
         RowLayout {
             spacing: 15
+            anchors.fill: parent
             Layout.fillWidth: true
 
             Rectangle {
@@ -107,13 +108,8 @@ Rectangle {
                 }
             }
         }
-
         Item { Layout.fillHeight: true }
 
         VolumMixer {}
-
-        ColumnLayout {
-            Layout.fillWidth: true
-        }
     }
 }
