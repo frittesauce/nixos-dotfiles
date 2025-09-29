@@ -6,6 +6,7 @@ import Quickshell
 import Quickshell.Hyprland
 import QtQuick.Effects
 import qs.modules.QuickSettings
+import qs.modules.VolumMixer
 import qs.modules.common
 import qs.services
 import qs
@@ -108,6 +109,8 @@ Rectangle {
         }
 
         Item { Layout.fillHeight: true }
+
+        VolumMixer {}
 
         ColumnLayout {
             Layout.fillWidth: true
