@@ -22,18 +22,29 @@ Item {
             id: layout
             anchors.fill: parent
             spacing: 20
-            
-            Slider {
-                Layout.fillWidth: true
-                from: 0
-                to: 1
-                value: Audio.volume
 
-                onMoved: {
-                    Audio.setVolume(value)
+            RowLayout {
+                Text {
+                    text: ""
+                    font.pixelSize: 25
+                    font.family: Config.defaultFont 
+                    color: Colours.fgcolor
                 }
 
+                Slider {
+                    Layout.fillWidth: true
+                    from: 0
+                    to: 1
+                    value: Audio.volume
+
+                    onMoved: {
+                        Audio.setVolume(value)
+                        console.log(JSON.stringify(Audio, null, 2))
+                    }
+
+                }
             }
+            
 
         }
 
