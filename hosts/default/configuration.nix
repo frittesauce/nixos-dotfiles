@@ -20,6 +20,9 @@ in
       (Module "services/syncthing")
 
       (Module "programs/spotify")
+
+
+      (Module "code/kotlin")
     ];
 
   system.stateVersion = "25.05";

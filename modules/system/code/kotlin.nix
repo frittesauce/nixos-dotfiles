@@ -7,6 +7,6 @@
     kotlin-native
     zulu24
     gradle
-    jetbrains.idea-ultimate
+    android-studio
   ];
 }
