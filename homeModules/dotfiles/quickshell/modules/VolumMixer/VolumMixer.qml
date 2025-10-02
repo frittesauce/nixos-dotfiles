@@ -86,7 +86,7 @@ Item {
                             value: modelData.audio.volume
 
                             onMoved: {
-                                Audio.changeAppVolume(modelData.id ,value)
+                                Audio.setAppVolume(modelData.id ,value)
                             }
                         }
                     }

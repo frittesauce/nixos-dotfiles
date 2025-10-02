@@ -44,7 +44,7 @@ Singleton {
         }
     }
 
-    function changeAppVolume(appId: int,newVolume: real) {
+    function setAppVolume(appId: int,newVolume: real) {
         let node = appPwNodes.find(n => n.id === appId);
         if (node?.audio) {
             node.audio.muted = false;
