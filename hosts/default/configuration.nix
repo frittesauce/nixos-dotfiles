@@ -23,6 +23,7 @@ in
 
 
       (Module "code/kotlin")
+      (Module "code/nvim")
     ];
 
   system.stateVersion = "25.05";
