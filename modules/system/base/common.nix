@@ -3,6 +3,7 @@
 { 
  environment.systemPackages = with pkgs; [
     home-manager
+    neovim
     git
     fastfetch
     rofi
@@ -34,6 +35,7 @@
     rustc
     libyaml
     obsidian
+    rust-analyzer
     lazygit
     pipewire
     pokeget-rs
