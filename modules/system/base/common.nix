@@ -17,6 +17,7 @@
     megacmd
     gcc
     cargo
+    gh
     pavucontrol
     # discord
     vesktop
