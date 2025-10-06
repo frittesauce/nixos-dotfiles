@@ -21,6 +21,8 @@ in
       (Module "services/flatpak")
 
       (Module "programs/spotify")
+
+      (Module "code/nvim")
     ];
 
   system.stateVersion = "25.05";

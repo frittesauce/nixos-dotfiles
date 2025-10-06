@@ -33,7 +33,6 @@
     readline
     rustc
     libyaml
-    rustup
     obsidian
     lazygit
     pipewire

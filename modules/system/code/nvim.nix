@@ -13,6 +13,8 @@
    stylua
    ast-grep
 
+  rust-analyzer
+
    lua
    lua5_1
    luaPackages.luarocks
