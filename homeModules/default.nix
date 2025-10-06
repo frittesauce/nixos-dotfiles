@@ -5,5 +5,6 @@
     ./shell
     ./desktopEnviorments/hyprland
     ./syncthing
+    ./nvim
   ];
 }
