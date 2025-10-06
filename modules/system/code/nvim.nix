@@ -1,7 +1,7 @@
 { pkgs, ...}: 
 
 { 
- environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
    neovim 
    tree-sitter
    curl
@@ -12,13 +12,17 @@
    python3
    stylua
    ast-grep
+
    lua
+   lua5_1
+   luaPackages.luarocks
    unzip
    wget
    go
-   composer
+   
    php 
+   phpPackages.composer
+  
    julia
-   pip
- ];
+  ];
 }
