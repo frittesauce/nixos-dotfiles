@@ -2,7 +2,7 @@
 
 {
 
-  imports = [../../terminals/kitty
+  imports = [
               ./bar
   ];
 

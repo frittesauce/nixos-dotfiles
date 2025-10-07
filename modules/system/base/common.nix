@@ -41,6 +41,7 @@
     lazygit
     pipewire
     pokeget-rs
+    kitty
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -58,14 +59,6 @@
 
   security = {
     rtkit.enable = true;
-  };
-
-  system.activationScripts.dotfilesReload = {
-    text = ''
-      echo "Running dotfiles post-rebuild script..."
-      find "$HOME/nixos/scripts/ -type f -name "*.sh" -exec chmod +x {} \;
-      $HOME/nixos/dotfiles/scripts/stow.sh
-    '';
   };
 
   nix = {
