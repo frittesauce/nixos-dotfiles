@@ -1,6 +1,13 @@
-{ inputs, pkgs, config, ...}:
+{
+  inputs,
+  pkgs,
+  config,
+  ...
+}:
 
 {
+  services.gnome-keyring.enable = true;
+
   imports = [
     ./shell
     ./desktopEnviorments/hyprland
@@ -8,3 +15,4 @@
     ./nvim
   ];
 }
+

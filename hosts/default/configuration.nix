@@ -18,7 +18,6 @@ in
 
     (Module "services/flatpak")
     (Module "services/syncthing")
-    (Module "services/ssh")
 
     (Module "programs/spotify")
 
