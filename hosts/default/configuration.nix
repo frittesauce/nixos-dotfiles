@@ -6,27 +6,26 @@ let
 in
 {
   imports = [
-      ./hardware-configuration.nix
-      (Default "base")
-      (Default "boot")
-      (Default "desktop")
-      
-      (Module "hardware/audio")
-      (Module "hardware/bluetooth")
-      (Module "hardware/common")
-      (Module "hardware/network")
+    ./hardware-configuration.nix
+    (Default "base")
+    (Default "boot")
+    (Default "desktop")
 
-      (Module "services/flatpak")
-      (Module "services/syncthing")
+    (Module "hardware/audio")
+    (Module "hardware/bluetooth")
+    (Module "hardware/common")
+    (Module "hardware/network")
 
-      (Module "programs/spotify")
+    (Module "services/flatpak")
+    (Module "services/syncthing")
+    (Module "services/ssh")
 
+    (Module "programs/spotify")
 
-      (Module "code/kotlin")
-    ];
+    (Module "code/kotlin")
+  ];
 
   system.stateVersion = "25.05";
-
 
   home-manager = {
 
@@ -38,17 +37,18 @@ in
     };
   };
 
-
   services.desktopManager.gnome.enable = true;
 
   users.users.boogieman = {
     isNormalUser = true;
     description = "boogieman";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     shell = pkgs.zsh;
   };
 
-  
   services.mpd = {
     enable = true;
     musicDirectory = "/home/user/Music/synced";

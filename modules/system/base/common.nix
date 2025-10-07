@@ -1,7 +1,7 @@
-{ pkgs, ...}: 
+{ pkgs, ... }:
 
-{ 
- environment.systemPackages = with pkgs; [
+{
+  environment.systemPackages = with pkgs; [
     home-manager
     neovim
     git
@@ -33,6 +33,7 @@
     gmp
     readline
     rustc
+    rustfmt
     libyaml
     obsidian
     rust-analyzer
@@ -43,22 +44,20 @@
 
   nixpkgs.config.allowUnfree = true;
 
-
   programs = {
-    firefox.enable = true; 
+    firefox.enable = true;
     zsh.enable = true;
     thunar.enable = true;
     steam.enable = true;
   };
 
   services = {
-    printing.enable = true; 
+    printing.enable = true;
   };
 
   security = {
     rtkit.enable = true;
   };
-
 
   nix = {
     gc = {
