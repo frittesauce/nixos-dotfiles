@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     home-manager
     neovim
+    stow
     git
     fastfetch
     rofi
