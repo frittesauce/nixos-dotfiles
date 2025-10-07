@@ -20,8 +20,4 @@
     initContent = builtins.readFile ../dotfiles/.zshrc;
   };
 
-  home.file = {
-    ".config/starship.toml".source = ../dotfiles/starship.toml;
-  };
-
 }
