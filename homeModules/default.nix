@@ -13,6 +13,7 @@
     ./desktopEnviorments/hyprland
     ./syncthing
     ./nvim
+    ./font.nix
   ];
 }
 

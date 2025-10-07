@@ -6,7 +6,8 @@ if [ -d "$THEME_DIR" ]; then
     echo "$THEME" > ~/nixos/current_theme
 
     ln -sf "$THEME_DIR/current-theme.conf" ~/.config/kitty/current-theme.conf
-
+    ln -sf "$THEME_DIR/Colours.qml" ~/.config/quickshell/services/Colours.qml
+    ln -sf "$THEME_DIR/wallpapers" ~/Pictures/wallpapers
 
     kill -USR1 $(pgrep kitty)
 else
