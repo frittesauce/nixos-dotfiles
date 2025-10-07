@@ -17,7 +17,7 @@
     enable = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    initContent = builtins.readFile ../dotfiles/.zshrc;
+    initContent = builtins.readFile ./.zshrc;
   };
 
 }
