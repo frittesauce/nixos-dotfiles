@@ -13,21 +13,27 @@
 
   };
 
-  outputs = { self, nixpkgs, spicetify-nix, ... }@inputs: 
+  outputs =
+    {
+      self,
+      nixpkgs,
+      spicetify-nix,
+      ...
+    }@inputs:
     {
       nixosConfigurations = {
-        default = nixpkgs.lib.nixosSystem {
-          specialArgs = {inherit inputs;};
+        boogieman = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
           modules = [
             inputs.home-manager.nixosModules.default
-            ./hosts/default/configuration.nix
+            ./hosts/boogieman/configuration.nix
           ];
         };
-        desktop = nixpkgs.lib.nixosSystem {
-          specialArgs = {inherit inputs;};
+        farmslop = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs; };
           modules = [
             inputs.home-manager.nixosModules.default
-            ./hosts/desktop/configuration.nix
+            ./hosts/farmslop/configuration.nix
           ];
         };
       };

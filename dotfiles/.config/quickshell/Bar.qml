@@ -24,8 +24,10 @@ PanelWindow {
       bottom: parent.bottom
       horizontalCenter: parent.horizontalCenter
     }
+
     implicitHeight: 35
     width: parent.width
+    
     Right {}
 
     Center {}

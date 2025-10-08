@@ -6,26 +6,25 @@ let
 in
 {
   imports = [
-      ./hardware-configuration.nix
-      (Default "base")
-      (Default "boot")
-      (Default "desktop")
+    ./hardware-configuration.nix
+    (Default "base")
+    (Default "boot")
+    (Default "desktop")
 
-      (Module "drivers/nvidia")
-      
-      (Module "hardware/audio")
-      (Module "hardware/bluetooth")
-      (Module "hardware/common")
-      (Module "hardware/network")
+    (Module "drivers/nvidia")
 
-      (Module "services/flatpak")
+    (Module "hardware/audio")
+    (Module "hardware/bluetooth")
+    (Module "hardware/common")
+    (Module "hardware/network")
 
-      (Module "programs/spotify")
+    (Module "services/flatpak")
 
-    ];
+    (Module "programs/spotify")
+
+  ];
 
   system.stateVersion = "25.05";
-
 
   home-manager = {
 
@@ -37,17 +36,20 @@ in
     };
   };
 
+  environment.sessionVariables.HOSTNM = "farmmslop";
 
   services.desktopManager.gnome.enable = true;
 
   users.users.farmslop = {
     isNormalUser = true;
     description = "farmslop";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     shell = pkgs.zsh;
   };
 
-  
   services.mpd = {
     enable = true;
     musicDirectory = "/home/user/Music/synced";
