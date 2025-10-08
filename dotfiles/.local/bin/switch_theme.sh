@@ -8,6 +8,7 @@ if [ -d "$THEME_DIR" ]; then
     ln -sf "$THEME_DIR/kittyCol.conf" ~/.config/kitty/current-theme.conf
     ln -sf "$THEME_DIR/Colours.qml" ~/.config/quickshell/services/Colours.qml
     ln -sf "$THEME_DIR/wallpapers" ~/Pictures/
+    ln -sf "$THEME_DIR/icon.jpg" ~/.config/fastfetch/icon.jpg
 
     file=$(ls $THEME_DIR/wallpapers | shuf -n 1)
 
