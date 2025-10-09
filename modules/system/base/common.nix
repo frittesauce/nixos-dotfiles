@@ -42,6 +42,7 @@
     pipewire
     pokeget-rs
     kitty
+    fd
   ];
 
   nixpkgs.config.allowUnfree = true;

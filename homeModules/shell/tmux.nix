@@ -1,49 +1,41 @@
-{ config, pkgs, ... }:
-
+{ pkgs, ... }:
 {
+  programs.zsh.enable = true;
   programs.tmux = {
     enable = true;
-
+    shell = "${pkgs.zsh}/bin/zsh";
+    shortcut = "d";
+    baseIndex = 1;
+    newSession = false;
+    escapeTime = 0;
+    mouse = true;
+    clock24 = true;
+    historyLimit = 1000;
     plugins = with pkgs.tmuxPlugins; [
+      mode-indicator
       catppuccin
-      cpu
-      battery
     ];
 
     extraConfig = ''
-      unbind r
-      bind r source-file ~/.config/tmux/tmux.conf
+      set -g default-terminal "xterm-256color"
+      set -ga terminal-overrides ",*256col*:Tc"
+      set -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q'
+      set-environment -g COLORTERM "truecolor"
+      set-option -gw xterm-keys on
 
-      set -g prefix C-z
+      unbind-key :
+      bind-key \; command-prompt
 
       bind-key h select-pane -L
       bind-key j select-pane -D
       bind-key k select-pane -U
       bind-key l select-pane -R
 
-      set-option -g status-position top
+      bind-key -n C-Tab next-window
+      bind-key -n C-BTab previous-window
 
-      set -g @catppuccin_window_left_separator "█"
-      set -g @catppuccin_window_right_separator "█ "
-      set -g @catppuccin_window_number_position "right"
-      set -g @catppuccin_window_middle_separator "  █"
-
-      set -g @catppuccin_window_default_fill "number"
-
-      set -g @catppuccin_window_current_fill "number"
-      set -g @catppuccin_window_current_text "#{pane_current_path}"
-
-      set -g @catppuccin_status_modules_right "application session date_time"
-      set -g @catppuccin_status_left_separator  ""
-      set -g @catppuccin_status_right_separator " "
-      set -g @catppuccin_status_right_separator_inverse "yes"
-      set -g @catppuccin_status_fill "all"
-      set -g @catppuccin_status_connect_separator "no"
-
-      '';
-
+      set -g status-right '#{tmux_mode_indicator}'
+     
+    '';
   };
-
-
-
 }

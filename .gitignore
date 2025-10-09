@@ -1,3 +1,7 @@
 # ignore all symlinks
 **/*.lnk
 **/*.symlink
+dotfiles/.config/rofi/config.rasi
+dotfiles/.config/quickshell/services/Colours.qml
+dotfiles/.config/fastfetch/icon.jpg
+dotfiles/.config/kitty/current-theme.conf

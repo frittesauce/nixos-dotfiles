@@ -1,1 +1,1 @@
-/home/boogieman/nixos/themes/purple/Colours.qml
+/home/farmslop/nixos/themes/catppuccin/Colours.qml
