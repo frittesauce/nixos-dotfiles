@@ -36,7 +36,7 @@ in
     };
   };
 
-  environment.sessionVariables.HOSTNM = "farmmslop";
+  environment.sessionVariables.HOSTNM = "farmslop";
 
   services.desktopManager.gnome.enable = true;
 
