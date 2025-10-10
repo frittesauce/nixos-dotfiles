@@ -22,9 +22,9 @@
       lua51Packages.tiktoken_core
       gnumake
       python3Packages.jedi-language-server
+      prettier
     ];
     plugins = [ pkgs.vimPlugins.nvim-treesitter.withAllGrammars ];
   };
 
 }
-
