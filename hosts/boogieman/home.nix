@@ -2,25 +2,21 @@
 
 {
 
-  imports = [ ../../homeModules/default.nix];
-  
-  
+  imports = [ ../../homeModules/default.nix ];
+
   home.username = "boogieman";
   home.homeDirectory = "/home/boogieman";
-
 
   programs.git = {
     enable = true;
     userName = "frittesauce";
-    userEmail= "181068943+frittesauce@users.noreply.github.com";
+    userEmail = "181068943+frittesauce@users.noreply.github.com";
   };
 
-  home.stateVersion = "24.11"; 
-
+  home.stateVersion = "24.11";
 
   home.packages = [
   ];
-
 
   gtk = {
     enable = true;
@@ -34,7 +30,7 @@
     enable = true;
     platformTheme.name = "qt5ct";
   };
-  
+
   home.file = {
   };
 

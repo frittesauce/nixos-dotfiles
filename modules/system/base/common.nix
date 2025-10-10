@@ -43,6 +43,11 @@
     pokeget-rs
     kitty
     fd
+    libnotify
+    openssl
+
+    svelte-language-server
+    typescript-language-server
   ];
 
   nixpkgs.config.allowUnfree = true;
