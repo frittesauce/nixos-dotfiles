@@ -12,8 +12,6 @@ return {
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
 
-
-  
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
@@ -123,6 +121,7 @@ return {
     opts = {
       ensure_installed = {
         "bash",
+        "svelte",
         "html",
         "javascript",
         "json",

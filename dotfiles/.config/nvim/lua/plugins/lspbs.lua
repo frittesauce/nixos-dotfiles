@@ -3,6 +3,7 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        svelte = {},
         rust_analyzer = {},
         ruff = {},
         gopls = {},
@@ -14,3 +15,4 @@ return {
     },
   },
 }
+

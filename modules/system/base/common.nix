@@ -46,6 +46,8 @@
     libnotify
     openssl
 
+    tree-sitter
+
     svelte-language-server
     typescript-language-server
   ];
