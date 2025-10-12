@@ -1,26 +1,26 @@
-{ config, pkgs, ... }:
+{
+  config,
+  inputs,
+  pkgs,
+  ...
+}:
 
 {
 
-  imports = [ ../../homeModules/default.nix];
-  
-  
+  imports = [
+    ../../homeModules/default.nix
+  ];
+
   home.username = "farmslop";
   home.homeDirectory = "/home/farmslop";
-
 
   programs.git = {
     enable = true;
     userName = "frittesauce";
-    userEmail= "181068943+frittesauce@users.noreply.github.com";
+    userEmail = "181068943+frittesauce@users.noreply.github.com";
   };
 
-  home.stateVersion = "24.11"; 
-
-
-  home.packages = [
-  ];
-
+  home.stateVersion = "24.11";
 
   gtk = {
     enable = true;
@@ -34,7 +34,7 @@
     enable = true;
     platformTheme.name = "qt5ct";
   };
-  
+
   home.file = {
   };
 

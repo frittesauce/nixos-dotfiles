@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 let
   systemDir = ../../modules/system;
   Module = name: systemDir + "/${name}.nix";
@@ -27,9 +27,9 @@ in
   system.stateVersion = "25.05";
 
   home-manager = {
-
     useGlobalPkgs = true;
     useUserPackages = true;
+    extraSpecialArgs = { inherit inputs; };
 
     users = {
       "boogieman" = import ./home.nix;
