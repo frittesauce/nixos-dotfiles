@@ -1,10 +1,11 @@
 return {
-  "folke/tokyonight.nvim",
+  "Mofiqul/dracula.nvim",
   opts = {
-    transparent = true,
+    transparent_bg = true,
     styles = {
       sidebars = "transparent",
       floats = "transparent",
     },
   },
 }
+
