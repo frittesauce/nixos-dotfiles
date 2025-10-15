@@ -25,7 +25,6 @@
     vesktop
     code-cursor
     ngrok
-    ruby
     sqlite
     gnumake
     pkg-config
