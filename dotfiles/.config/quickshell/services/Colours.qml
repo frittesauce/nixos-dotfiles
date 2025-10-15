@@ -1,1 +1,1 @@
-/home/farmslop/nixos/themes/dracula/Colours.qml
+/home/boogieman/nixos/themes/dracula/Colours.qml
