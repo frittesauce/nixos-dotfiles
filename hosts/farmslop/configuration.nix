@@ -19,6 +19,7 @@ in
     (Module "hardware/network")
 
     (Module "services/flatpak")
+    (Module "services/docker")
 
     (Module "programs/spotify")
 
@@ -46,6 +47,7 @@ in
     extraGroups = [
       "networkmanager"
       "wheel"
+      "docker"
     ];
     shell = pkgs.zsh;
   };
