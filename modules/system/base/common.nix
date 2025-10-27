@@ -18,9 +18,11 @@
     vscode
     megacmd
     gcc
+    obs-studio
     cargo
     gh
     pavucontrol
+    prismlauncher
     # discord
     vesktop
     code-cursor
