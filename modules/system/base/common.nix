@@ -24,6 +24,8 @@
     pavucontrol
     prismlauncher
     # discord
+    luajitPackages.magick
+    mpv
     vesktop
     code-cursor
     ngrok
