@@ -13,7 +13,6 @@
     sddm-astronaut
     brightnessctl
     bun
-    nodejs
     tree
     vscode
     megacmd
@@ -52,7 +51,10 @@
     tree-sitter
 
     svelte-language-server
-    typescript-language-server
+
+    nodejs
+    nodePackages.typescript
+    nodePackages.typescript-language-server
   ];
 
   nixpkgs.config.allowUnfree = true;

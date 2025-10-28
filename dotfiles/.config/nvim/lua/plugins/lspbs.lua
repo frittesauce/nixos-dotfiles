@@ -4,6 +4,7 @@ return {
     opts = {
       servers = {
         svelte = {},
+        tsserver = {},
         rust_analyzer = {},
         ruff = {},
         gopls = {},
@@ -15,4 +16,3 @@ return {
     },
   },
 }
-

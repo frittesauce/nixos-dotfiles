@@ -23,6 +23,8 @@
       gnumake
       python3Packages.jedi-language-server
       prettier
+      eslint_d
+      typescript
     ];
     plugins = [ pkgs.vimPlugins.nvim-treesitter.withAllGrammars ];
   };
