@@ -4,7 +4,9 @@ return {
     opts = {
       servers = {
         svelte = {},
-        tsserver = {},
+        ts_ls = {},
+        tailwindcss = {},
+        solargraph = {},
         rust_analyzer = {},
         ruff = {},
         gopls = {},

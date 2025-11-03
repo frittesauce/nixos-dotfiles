@@ -11,6 +11,7 @@ return {
       debounce_timeout = 10,
       enable_line_number = false,
       blacklist = {},
+      buttons = false,
       file_assets = {},
       show_time = true,
 

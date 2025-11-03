@@ -48,6 +48,8 @@
     libnotify
     openssl
 
+    blockbench
+
     tree-sitter
 
     svelte-language-server
@@ -55,6 +57,11 @@
     nodejs
     nodePackages.typescript
     nodePackages.typescript-language-server
+    tailwindcss-language-server
+
+    ruby
+    rubyPackages.solargraph
+
   ];
 
   nixpkgs.config.allowUnfree = true;
