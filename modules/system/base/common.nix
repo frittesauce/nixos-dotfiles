@@ -10,7 +10,6 @@
     rofi
     swww
     megacmd
-    sddm-astronaut
     brightnessctl
     bun
     tree
@@ -48,6 +47,8 @@
     libnotify
     openssl
 
+    nemo
+
     blockbench
 
     tree-sitter
@@ -69,7 +70,6 @@
   programs = {
     firefox.enable = true;
     zsh.enable = true;
-    thunar.enable = true;
     steam.enable = true;
   };
 
