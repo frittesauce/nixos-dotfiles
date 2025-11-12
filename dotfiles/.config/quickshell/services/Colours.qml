@@ -1,1 +1,1 @@
-/home/farmslop/nixos/themes/nord/Colours.qml
+/home/boogieman/nixos/themes/nord/Colours.qml
