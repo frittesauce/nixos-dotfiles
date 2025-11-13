@@ -11,6 +11,8 @@ in
 {
   services.gnome-keyring.enable = true;
 
+  services.vicinae.enable = true;
+
   home.packages = [
     inputs.zen-browser.packages."${system}".twilight
   ];
@@ -21,5 +23,6 @@ in
     ./syncthing
     ./nvim
     ./font.nix
+    inputs.vicinae.homeManagerModules.default
   ];
 }

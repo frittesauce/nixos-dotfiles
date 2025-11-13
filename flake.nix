@@ -12,6 +12,8 @@
     };
 
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
+
+    vicinae.url = "github:vicinaehq/vicinae";
   };
 
   outputs =
@@ -20,6 +22,7 @@
       nixpkgs,
       spicetify-nix,
       zen-browser,
+      vicinae,
       ...
     }@inputs:
     {
