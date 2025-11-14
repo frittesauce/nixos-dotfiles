@@ -22,7 +22,6 @@ in
     (Module "programs/spotify")
 
     (Module "code/kotlin")
-    (Module "code/python")
   ];
 
   system.stateVersion = "25.05";

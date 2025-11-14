@@ -11,18 +11,16 @@ in
 {
   services.gnome-keyring.enable = true;
 
-  services.vicinae.enable = true;
-
   home.packages = [
     inputs.zen-browser.packages."${system}".twilight
   ];
 
   imports = [
     ./shell
+    ./vicinae.nix
     ./desktopEnviorments/hyprland
     ./syncthing
     ./nvim
     ./font.nix
-    inputs.vicinae.homeManagerModules.default
   ];
 }
