@@ -36,8 +36,6 @@ in
     };
   };
 
-  services.desktopManager.gnome.enable = true;
-
   environment.sessionVariables.HOSTNM = "boogieman";
 
   users.users.boogieman = {

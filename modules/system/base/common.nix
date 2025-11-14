@@ -75,6 +75,7 @@
 
   services = {
     printing.enable = true;
+    upower.enable = true;
   };
 
   security = {
