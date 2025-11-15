@@ -6,7 +6,7 @@
 
   services.vicinae = {
     enable = true;
-    autoStart = true;
+    autoStart = false;
 
     settings = {
 
