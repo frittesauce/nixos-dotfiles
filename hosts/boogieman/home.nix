@@ -28,7 +28,7 @@
     gtk4.extraCss = "@import 'colors.css';";
     gtk3.extraCss = "@import 'colors.css';";
     theme = {
-      name = "Adwaita-dark";
+      name = "adw-gtk3";
       package = pkgs.gnome-themes-extra;
     };
   };
