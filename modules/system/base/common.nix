@@ -18,6 +18,7 @@
     gcc
     obs-studio
     cargo
+    clippy
     gh
     pavucontrol
     prismlauncher
@@ -62,6 +63,8 @@
 
     ruby
     rubyPackages.solargraph
+    gparted
+    google-chrome
 
   ];
 

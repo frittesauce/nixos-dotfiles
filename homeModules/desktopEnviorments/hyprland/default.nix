@@ -1,12 +1,14 @@
-{ config, pkgs, ... }:
+{
+  inputs,
+  pkgs,
+  ...
+}:
 
 {
-
   imports = [
-              ./bar
+    ./bar
   ];
 
   programs.hyprlock.enable = true;
-
 
 }

@@ -2,6 +2,7 @@ export EDITOR="nvim"
 export SUDO_EDITOR="$EDITOR"
 export PGHOST="/var/run/postgresql"
 
+
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:${HOME}/.cargo/bin
 export PATH=$PATH:${HOME}/.local/bin
@@ -38,5 +39,7 @@ setopt inc_append_history
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 autoload -U compinit; compinit
 
+
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+

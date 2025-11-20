@@ -37,6 +37,7 @@ in
   };
 
   environment.sessionVariables.HOSTNM = "boogieman";
+  services.desktopManager.gnome.enable = true;
 
   users.users.boogieman = {
     isNormalUser = true;
