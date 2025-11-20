@@ -25,6 +25,8 @@
 
   gtk = {
     enable = true;
+    gtk4.extraCss = "@import 'colors.css';";
+    gtk3.extraCss = "@import 'colors.css';";
     theme = {
       name = "Adwaita-dark";
       package = pkgs.gnome-themes-extra;
@@ -33,7 +35,7 @@
 
   qt = {
     enable = true;
-    platformTheme.name = "qt5ct";
+    platformTheme.name = "qtct";
   };
 
   home.file = {

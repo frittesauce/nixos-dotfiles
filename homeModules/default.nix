@@ -12,6 +12,7 @@ in
 
   home.packages = [
     inputs.zen-browser.packages."${system}".twilight
+    pkgs.matugen
   ];
 
   imports = [
