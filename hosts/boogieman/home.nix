@@ -35,6 +35,12 @@
         }
       );
     };
+    
+    cursorTheme = {
+      name = "catppuccin-mocha-dark-cursors";
+      package = pkgs.catppuccin-cursors.mochaDark;
+      size = 24;
+    };
   };
 
   qt = {
@@ -47,6 +53,8 @@
 
   home.sessionVariables = {
     TERMINAL = "kitty";
+    XCURSOR_THEME = "catppuccin-mocha-dark-cursors";
+    XCURSOR_SIZE = "24";
   };
 
   programs.home-manager.enable = true;
