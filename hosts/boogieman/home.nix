@@ -24,12 +24,16 @@
   ];
 
   gtk = {
-    enable = true;
-    gtk4.extraCss = "@import 'colors.css';";
-    gtk3.extraCss = "@import 'colors.css';";
     theme = {
-      name = "adw-gtk3";
-      package = pkgs.gnome-themes-extra;
+      name = "Catppuccin-Mocha-Standard-Blue-Dark";
+      package = (
+        pkgs.catppuccin-gtk.override {
+          variant = "mocha";
+          accents = [ "blue" ];
+          size = "standard";
+          tweaks = [ "normal" ];
+        }
+      );
     };
   };
 

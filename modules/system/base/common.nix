@@ -64,8 +64,8 @@
     ruby
     rubyPackages.solargraph
     gparted
-    google-chrome
 
+    brave
   ];
 
   nixpkgs.config.allowUnfree = true;

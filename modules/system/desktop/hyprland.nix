@@ -1,12 +1,12 @@
 { pkgs, ... }:
 
 {
-   environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     hyprlang
     hyprland
     hyprlock
     hyprpicker
-    
+
     waypaper
     swww
 
@@ -15,10 +15,11 @@
     grim
 
   ];
-  
+
   programs.hyprland = {
     enable = true;
     withUWSM = false;
     xwayland.enable = true;
   };
 }
+
