@@ -22,6 +22,7 @@
       lua51Packages.tiktoken_core
       gnumake
       python3Packages.jedi-language-server
+
       prettier
       eslint_d
       typescript

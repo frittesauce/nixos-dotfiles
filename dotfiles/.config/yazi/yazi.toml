@@ -2,7 +2,7 @@
 show_hidden = false
 
 [opener]
-swww = [{ run = 'swww img "$0" --resize stretch', block = false, for = "unix" }]
+wallpaper = [{ run = 'matugen image "$0"', block = false, for = "unix" }]
 
 [open]
-rules = [{ mime = "image/*", use = "swww" }]
+rules = [{ mime = "image/*", use = "wallpaper" }]

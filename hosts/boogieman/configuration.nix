@@ -43,6 +43,7 @@ in
     isNormalUser = true;
     description = "boogieman";
     extraGroups = [
+      "dialout"
       "networkmanager"
       "wheel"
     ];
