@@ -1,4 +1,4 @@
 swww-daemon &
-quickshell &
+ quickshell &
 vicinae server &
 hyprctl setcursor catppuccin-mocha-dark-cursors 24 &
