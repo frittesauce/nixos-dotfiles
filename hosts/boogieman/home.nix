@@ -37,9 +37,8 @@
     };
     
     cursorTheme = {
-      name = "catppuccin-mocha-dark-cursors";
-      package = pkgs.catppuccin-cursors.mochaDark;
-      size = 24;
+      name = "Breeze";
+      size = 48;
     };
   };
 
@@ -53,8 +52,8 @@
 
   home.sessionVariables = {
     TERMINAL = "kitty";
-    XCURSOR_THEME = "catppuccin-mocha-dark-cursors";
-    XCURSOR_SIZE = "24";
+    XCURSOR_THEME = "Breeze";
+    XCURSOR_SIZE = "48";
   };
 
   programs.home-manager.enable = true;
