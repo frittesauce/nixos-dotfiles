@@ -21,7 +21,9 @@
   home.stateVersion = "24.11";
 
   home.packages = [
+  (inputs.caelestia-shell.packages.${pkgs.system}.default)
   ];
+  
 
   gtk = {
     theme = {

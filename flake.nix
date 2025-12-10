@@ -17,6 +17,10 @@
       url = "github:vicinaehq/vicinae";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    caelestia-shell = {
+      url = "github:caelestia-dots/shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -26,6 +30,7 @@
       spicetify-nix,
       zen-browser,
       vicinae,
+      caelestia-shell,
       ...
     }@inputs:
     {
