@@ -7,7 +7,30 @@
 
 {
 
-  imports = [ ../../homeModules/default.nix ];
+  imports = [
+     ../../homeModules/default.nix
+    inputs.caelestia-shell.homeManagerModules.default ];
+
+
+    programs.caelestia = {
+      enable = true;
+
+      settings = {
+        # just an example, see the avaiable options in the repo's README
+        bar.status = {
+          showBattery = false;
+        };
+        paths.wallpaperDir = "~/Images";
+      };
+
+      cli = {
+        enable = true;
+        settings = {
+          # see avaiable options in caelestia-dots/cli
+          theme.enableGtk = false;
+        };
+      };
+    };
 
   home.username = "boogieman";
   home.homeDirectory = "/home/boogieman";
@@ -20,10 +43,6 @@
 
   home.stateVersion = "24.11";
 
-  home.packages = [
-  (inputs.caelestia-shell.packages.${pkgs.system}.default)
-  ];
-  
 
   gtk = {
     theme = {

@@ -32,8 +32,10 @@
       vicinae,
       caelestia-shell,
       ...
-    }@inputs:
-    {
+    }@inputs: 
+  let
+    system = "x86_64-linux";
+  in {
       nixosConfigurations = {
         boogieman = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
