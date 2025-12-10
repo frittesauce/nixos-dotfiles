@@ -8,29 +8,30 @@
 {
 
   imports = [
-     ../../homeModules/default.nix
-    inputs.caelestia-shell.homeManagerModules.default ];
+    ../../homeModules/default.nix
+    inputs.caelestia-shell.homeManagerModules.default
+  ];
 
+  programs.caelestia = {
+    enable = false;
 
-    programs.caelestia = {
-      enable = true;
-
-      settings = {
-        # just an example, see the avaiable options in the repo's README
-        bar.status = {
-          showBattery = false;
-        };
-        paths.wallpaperDir = "~/Images";
+    settings = {
+      background = {
+        enable = false;
       };
-
-      cli = {
-        enable = true;
-        settings = {
-          # see avaiable options in caelestia-dots/cli
-          theme.enableGtk = false;
-        };
+      bar.status = {
+        showBattery = true;
       };
     };
+
+    cli = {
+      enable = true;
+      settings = {
+        # see avaiable options in caelestia-dots/cli
+        theme.enableGtk = false;
+      };
+    };
+  };
 
   home.username = "boogieman";
   home.homeDirectory = "/home/boogieman";
@@ -42,7 +43,6 @@
   };
 
   home.stateVersion = "24.11";
-
 
   gtk = {
     theme = {
@@ -56,7 +56,7 @@
         }
       );
     };
-    
+
     cursorTheme = {
       name = "Breeze";
       size = 48;
